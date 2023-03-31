@@ -2,12 +2,10 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
 import { Component } from "react";
 
 class Movies extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      movies: []
-    };
-  }
+  state = {
+    movies: []
+  };
+
   async componentDidMount() {
     const response = await fetch("https://www.omdbapi.com/?apikey=6224eac4&s=harry-potter");
     const data = await response.json();
