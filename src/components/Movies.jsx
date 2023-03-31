@@ -22,11 +22,12 @@ class Movies extends Component {
           <Container fluid>
             <Row className="justify-content-center text-center">
               <h4 className="text-start text-white p-3">Harry Potter</h4>
-              <Col>
-                {movies.slice(0, 6).map(movie => (
-                  <img src={movie.Poster} alt={movie.Title} style={{ width: "200px" }} />
-                ))}
-              </Col>
+
+              {movies.slice(0, 6).map(movie => (
+                <Col>
+                  <img src={movie.Poster} alt={movie.Title} style={{ width: "200px", height: "250px" }} />
+                </Col>
+              ))}
             </Row>
           </Container>
         </Carousel.Item>
