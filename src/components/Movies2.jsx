@@ -7,9 +7,17 @@ class Movies2 extends Component {
   };
 
   async componentDidMount() {
-    const response = await fetch("https://www.omdbapi.com/?apikey=6224eac4&s=naruto");
-    const data = await response.json();
-    this.setState({ movies2: data.Search });
+    try {
+      const response = await fetch("https://www.omdbapi.com/?apikey=6224eac4&s=naruto");
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({ movies2: data.Search });
+      } else {
+        console.log("error while fetching");
+      }
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render() {
