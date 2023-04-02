@@ -37,7 +37,7 @@ class Movies extends Component {
           <Container fluid>
             <h4 className="text-start text-white p-3">Harry Potter</h4>
             {this.state.isLoading && !this.state.error && (
-              <Spinner animation="border" role="status">
+              <Spinner animation="border" variant="success" role="status">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
             )}

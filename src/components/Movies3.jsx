@@ -3,7 +3,9 @@ import { Component } from "react";
 
 class Movies3 extends Component {
   state = {
-    movies3: []
+    movies3: [],
+    isLoading: false,
+    errMsg: ""
   };
 
   async componentDidMount() {
@@ -35,7 +37,7 @@ class Movies3 extends Component {
           <Container fluid>
             <h4 className="text-start text-white p-3">Star Wars</h4>
             {this.state.isLoading && !this.state.error && (
-              <Spinner animation="border" role="status">
+              <Spinner animation="border" variant="primary">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>
             )}
